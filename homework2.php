@@ -4,6 +4,7 @@
   if (($_POST['shots'] == '') || (!isset($_POST['shots']))) {
     echo "<P>データが未入力です。<BR />入力画面に戻ってください。</P>";
   } else {  // コマ数が入力されていたとき
+    require_once('function.php');
     $gender = $_POST['gender'];
     $age    = $_POST['age'];
     $job    = $_POST['job'];
@@ -20,7 +21,7 @@
     echo '<BR />';
 
     //  [書込]ボタンを表示（フォームの隠しフィールドで送る）
-    echo '<FORM METHOD="POST" ACTION="ex1001thanks.php">';
+    echo '<FORM METHOD="POST" ACTION="thanks.php">';
     echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
     echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
     echo '<INPUT NAME="job" type="hidden" value="'.$job.'">';
@@ -44,7 +45,7 @@
 <body>
     <h1>入力内容確認</h1>
     
-    <p><?php echo h($nickname_result); ?></p>
+    <p><?php echo h($gender_result); ?></p>
     <p><?php echo h($email_result); ?></p>
     <p><?php echo h($content_result); ?></p>
 
