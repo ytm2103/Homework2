@@ -7,9 +7,7 @@
     $stmt->execute();
     $results = $stmt->fetchAll();
 
-    echo '<pre>';
-    var_dump ($results);
-    exit; 
+    
 ?>
 
 
@@ -24,7 +22,7 @@
     <?php foreach ($results as $result): ?>
         <p><?php echo h($result['gender']); ?></p>
         <p><?php echo h($result['age']); ?></p>
-        <p><?php echo h($result['job']); ?></p>
+        <p><?php echo h($result['charactor']); ?></p>
         <p><?php echo h($result['kind']); ?></p>
         <p><?php echo h($result['shots']); ?></p>
         <hr>

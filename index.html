@@ -8,18 +8,27 @@
    <link rel="stylesheet" href="assets/css/reset.css">
 
    <!-- Bootstrap CSS -->
- ``
+ 
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    ​
    <link rel="stylesheet" href="assets/css/style.css">
+　 
+   <!-- google font-->
+   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
 <TITLE>example10</TITLE>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>  <!-- 前段の定義部分ここまで -->
 <!-- 以下本体 -->
 <BODY>
-<H2>JOJOの名言</H2>
-<H3>JOJOの名言に関するアンケート</H3>
+  <!-- header -->
+  <header class= "title">The Questionnaire of JoJo's Bizarre Adventure</header>
+      
+    <!-- //header -->
+<!-- <H2>JOJOの名言</H2> -->
+<!-- <H3>JOJOの名言に関するアンケート</H3> -->
+<div class="login-box-body">
 <FORM METHOD="POST" ACTION="homework2.php">
   <LABEL>性別：</LABEL>
   <INPUT TYPE="radio" NAME="gender" VALUE="男" checked>男
@@ -36,15 +45,15 @@
      <OPTION VALUE="70歳以上">70歳以上</OPTION>
     </SELECT>
   <BR />
-  <LABEL>職業：</LABEL>
-    <SELECT NAME="job">
-     <OPTION VALUE="学生" >学生</OPTION>
-     <OPTION VALUE="会社員" selected>会社員</OPTION>
-     <OPTION VALUE="公務員">公務員</OPTION>
-     <OPTION VALUE="自営業">自営業</OPTION>
-     <OPTION VALUE="自由業">自由業</OPTION>
-     <OPTION VALUE="アルバイト">パート・アルバイト</OPTION>
-     <OPTION VALUE="家事">家事</OPTION>
+  <LABEL>好きなキャラ：</LABEL>
+    <SELECT NAME="charactor">
+     <OPTION VALUE="DIO" >DIO</OPTION>
+     <OPTION VALUE="承太郎" selected>承太郎</OPTION>
+     <OPTION VALUE="花京院">花京院</OPTION>
+     <OPTION VALUE="ポルナレフ">ポルナレフ</OPTION>
+     <OPTION VALUE="アブドゥル">アブドゥル</OPTION>
+     <OPTION VALUE="ジョセフ・ジョースター">ジョセフ・ジョースター</OPTION>
+     <OPTION VALUE="イギー">イギー</OPTION>
      <OPTION VALUE="その他">その他</OPTION>
     </SELECT>
   <BR />
@@ -66,6 +75,12 @@
   <BR />
   <INPUT TYPE="submit" VALUE="回答内容を確認">
   <INPUT TYPE="reset" VALUE="取消">
+  </div>
 </FORM>
   </BODY>
+  <!-- footer -->
+  <footer class="footer">
+      <p class="copyWriter">&copy;Yumi Iwagaki</p>
+    </footer>
+    <!-- //footer -->
 </HTML>

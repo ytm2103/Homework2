@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<HTML>
+<HTML lang="ja">
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<TITLe>example10-2</TITLE>
-</HEAD>
-<BODY>
-  <H2>JOJOの名言</H2>
-  <H3>JOJOの名言に関するアンケート</H3>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   ​<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link rel="stylesheet" href="assets/css/reset.css">
+
+   <!-- Bootstrap CSS -->
+ 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   ​
+   <link rel="stylesheet" href="assets/css/style.css">
+　 
+   <!-- google font-->
+   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+  <!-- header -->
+  <header class= "title">Thank you for Answering!!</header>
+      
+    <!-- //header -->
+
+    
 
 <?php
   try {
@@ -15,12 +31,12 @@
 
     $gender = $_POST['gender'];
     $age = $_POST['age'];
-    $job = $_POST['job'];
+    $charactor = $_POST['charactor'];
     $kind = $_POST['kind'];
     $shots = $_POST['shots'];
     // SQLを実行
-    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, job, kind, shots) VALUES (?, ?, ?, ?, ?)');
-    $stmt -> execute([$gender, $age, $job, $kind, $shots]);//?を変数に置き換えてSQLを実行
+    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, charactor, kind, shots) VALUES (?, ?, ?, ?, ?)');
+    $stmt -> execute([$gender, $age, $charactor, $kind, $shots]);//?を変数に置き換えてSQLを実行
   } catch(PDOException $e) {  // 例外処理
     echo '障害によりご迷惑をおかけしています。<BR />';
     echo 'エラーの内容 : '.
@@ -32,13 +48,13 @@
   }
   $dbh = null;  // オブジェクトを破棄
 ?>
-  <h4>ご回答ありがとうございました！</h4>
+  <!-- <h4>ご回答ありがとうございました！</h4> -->
    <!-- 見るボタンを表示（フォームの隠しフィールドで送る） -->
    <?php
     echo '<FORM METHOD="POST" ACTION="view.php">';
     echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
     echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
-    echo '<INPUT NAME="job" type="hidden" value="'.$job.'">';
+    echo '<INPUT NAME="charactor" type="hidden" value="'.$charactor.'">';
     echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
     echo '<INPUT NAME="shots" type="hidden" value="'.$shots.'">';
     echo '<P>投票結果については、[見る]を押してください。</P>';
@@ -47,4 +63,9 @@
     echo '</FORM>';
     ?>
   </BODY>
+  <!-- footer -->
+  <footer class="footer">
+      <p class="copyWriter">&copy;Yumi Iwagaki</p>
+    </footer>
+    <!-- //footer -->
 </HTML>
