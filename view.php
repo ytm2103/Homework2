@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<HTML lang="ja">
-<HEAD>
+<!DOCtype html>
+<html lang="ja">
+<head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   ​<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   ​<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
    <link rel="stylesheet" href="assets/css/reset.css">
 
    <!-- Bootstrap CSS -->
@@ -23,13 +23,13 @@
       
     <!-- //header -->
  <body>
-   <div class ="content">
+   <div class ="vote_content">
     <?php
     require_once('function.php');
     require_once('dbconnect.php');
 
     //SQLを実行
-    $stmt = $dbh->prepare('SELECT * FROM Homework');
+    $stmt = $dbh->prepare('select * FROM Homework');
     $stmt->execute();
     $results = $stmt->fetchAll();
     $count_array = ['DIO' => 0,'jotaro' => 0];
@@ -44,16 +44,19 @@
         }
     }
 
-
-    echo 'DIO'.$count_array['DIO'];
+  
+    echo 'DIO'.'   '.$count_array['DIO'].'票';
     echo '<br>';
-    echo '承太郎'.$count_array['jotaro'];
+    echo '<br>';
+    echo '<br>';
+    echo '<br>';
+    echo '承太郎'.'   '.$count_array['jotaro'].'票';
 
     
 ?>
 
 
-<!-- <!DOCTYPE html>
+<!-- <!DOCtype html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
@@ -87,10 +90,10 @@ foreach ($alpha as $v) {
 
 </div>
 
-</BODY>
+</body>
   <!-- footer -->
   <footer class="footer">
       <p class="copyWriter">&copy;Yumi Iwagaki</p>
     </footer>
     <!-- //footer -->
-</HTML>
+</html>

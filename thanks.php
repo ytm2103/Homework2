@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<HTML lang="ja">
-<HEAD>
+<!DOCtype html>
+<html lang="ja">
+<head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   ​<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   ​<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
    <link rel="stylesheet" href="assets/css/reset.css">
 
    <!-- Bootstrap CSS -->
@@ -35,7 +35,7 @@
     // $kind = $_POST['kind'];
     $shots = $_POST['shots'];
     // SQLを実行
-    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, character, kind, shots) VALUES (?, ?, ?, ?, ?)');
+    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, character, kind, shots) valueS (?, ?, ?, ?, ?)');
     $stmt -> execute([$gender, $age, $character, $kind, $shots]);//?を変数に置き換えてSQLを実行
   } catch(PDOException $e) {  // 例外処理
     echo '障害によりご迷惑をおかけしています。<BR />';
@@ -52,21 +52,21 @@
    <!-- 見るボタンを表示（フォームの隠しフィールドで送る） -->
    <?php
     echo '<FORM METHOD="POST" ACTION="view.php">';
-    echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
-    echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
-    echo '<INPUT NAME="character" type="hidden" value="'.$character.'">';
-    // echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
-    echo '<INPUT NAME="shots" type="hidden" value="'.$shots.'">';
+    echo '<input name="gender" type="hidden" value="'.$gender.'">';
+    echo '<input name="age" type="hidden" value="'.$age.'">';
+    echo '<input name="character" type="hidden" value="'.$character.'">';
+    // echo '<input name="kind" type="hidden" value="'.$kind.'">';
+    echo '<input name="shots" type="hidden" value="'.$shots.'">';
     // echo '<P>投票結果については、[見る]を押してください。</P>';
-    echo '<INPUT TYPE="SUBMIT" id ="btn" VALUE="投票結果を見る">';
+    echo '<input type="SUBMIT" id ="btn" value="投票結果を見る">';
     echo '&nbsp;';
     echo '</FORM>';
     ?>
     </div>
-  </BODY>
+</body>
   <!-- footer -->
   <footer class="footer">
       <p class="copyWriter">&copy;Yumi Iwagaki</p>
     </footer>
     <!-- //footer -->
-</HTML>
+</html>

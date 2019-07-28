@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <HTML lang="ja">
-<HEAD>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   ​
-   <link rel="stylesheet" href="assets/css/reset.css">
 
-   <!-- Bootstrap CSS -->
- 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   ​
-   <link rel="stylesheet" href="assets/css/style.css">
-　 
-   <!-- google font-->
-   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
-<TITLE>example10</TITLE>
-<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</HEAD>  <!-- 前段の定義部分ここまで -->
+<HEAD>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  ​
+  <link rel="stylesheet" href="assets/css/reset.css">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  ​
+  <link rel="stylesheet" href="assets/css/style.css">
+  　
+  <!-- google font-->
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
+  <TITLE>example10</TITLE>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</HEAD> <!-- 前段の定義部分ここまで -->
 <!-- 以下本体 -->
+
 <BODY>
   <!-- header -->
-  <header class= "title">The Questionnaire of JoJo's Bizarre Adventure</header>
-      
-    <!-- //header -->
-<!-- <H2>JOJOの名言</H2> -->
-<!-- <H3>JOJOの名言に関するアンケート</H3> -->
-<div class="content">
-<FORM METHOD="POST" ACTION="homework2.php">
-  <LABEL>性別：</LABEL>
-  <INPUT TYPE="radio" NAME="gender" VALUE="男" checked>男
-  <INPUT type="radio" NAME="gender" VALUE="女">女
-  <BR />
-  <LABEL>年代：</LABEL>
-    <SELECT NAME="age">
-     <OPTION VALUE="10代" >10代</OPTION>
-     <OPTION VALUE="20代">20代</OPTION>
-     <OPTION VALUE="30代" selected>30代</OPTION>
-     <OPTION VALUE="40代">40代</OPTION>
-     <OPTION VALUE="50代">50代</OPTION>
-     <OPTION VALUE="60代">60代</OPTION>
-     <OPTION VALUE="70歳以上">70歳以上</OPTION>
-    </SELECT>
-  <BR />
-  <LABEL>好きなキャラ：</LABEL>
-    <SELECT NAME="character">
-     <OPTION VALUE="DIO" >DIO</OPTION>
-     <OPTION VALUE="承太郎" selected>承太郎</OPTION>
-     <OPTION VALUE="花京院">花京院</OPTION>
-     <OPTION VALUE="ポルナレフ">ポルナレフ</OPTION>
-     <OPTION VALUE="アブドゥル">アブドゥル</OPTION>
-     <OPTION VALUE="ジョセフ・ジョースター">ジョセフ・ジョースター</OPTION>
-     <OPTION VALUE="イギー">イギー</OPTION>
-     <OPTION VALUE="その他">その他</OPTION>
-    </SELECT>
-  <BR />
-  <!-- <LABEL>カメラの種類：</LABEL>
+  <header class="title">The Questionnaire of JoJo's Bizarre Adventure</header>
+
+  <!-- //header -->
+  <!-- <H2>JOJOの名言</H2> -->
+  <!-- <H3>JOJOの名言に関するアンケート</H3> -->
+  <div class="content">
+    <FORM METHOD="POST" ACTION="homework2.php">
+      <LABEL>性別：</LABEL>
+      <INPUT TYPE="radio" NAME="gender" VALUE="男" checked>男
+      <INPUT type="radio" NAME="gender" VALUE="女">女
+      <BR />
+      <LABEL>年代：</LABEL>
+      <SELECT NAME="age">
+        <OPTION VALUE="10代">10代</OPTION>
+        <OPTION VALUE="20代">20代</OPTION>
+        <OPTION VALUE="30代" selected>30代</OPTION>
+        <OPTION VALUE="40代">40代</OPTION>
+        <OPTION VALUE="50代">50代</OPTION>
+        <OPTION VALUE="60代">60代</OPTION>
+        <OPTION VALUE="70歳以上">70歳以上</OPTION>
+      </SELECT>
+      <BR />
+      <LABEL>好きなキャラ：</LABEL>
+      <SELECT NAME="character">
+        <OPTION VALUE="DIO">DIO</OPTION>
+        <OPTION VALUE="承太郎" selected>承太郎</OPTION>
+        <OPTION VALUE="花京院">花京院</OPTION>
+        <OPTION VALUE="ポルナレフ">ポルナレフ</OPTION>
+        <OPTION VALUE="アブドゥル">アブドゥル</OPTION>
+        <OPTION VALUE="ジョセフ・ジョースター">ジョセフ・ジョースター</OPTION>
+        <OPTION VALUE="イギー">イギー</OPTION>
+        <OPTION VALUE="その他">その他</OPTION>
+      </SELECT>
+      <BR />
+      <!-- <LABEL>カメラの種類：</LABEL>
     <SELECT NAME="kind">
      <OPTION VALUe="一眼レフ">一眼レフ</OPTION>
      <OPTION VALUE="ミラーレス">ミラーレス</OPTION>
@@ -67,20 +69,21 @@
      <OPTION VALUE="その他">その他</OPTION>
     </SELECT>
   <BR /> -->
-  <LABEL>第何部が好きか？：</LABEL>
-    <INPUT TYPE="text" SIZE="4" NAME="shots"> 部
-  <BR /><BR />
+      <LABEL>第何部が好きか？：</LABEL>
+      <INPUT TYPE="text" SIZE="4" NAME="shots"> 部
+      <BR /><BR />
 
-  <LABEL>ボタンを押して内容をご確認ください。</LABEL>
-  <BR />
-  <INPUT TYPE="submit" id ="btn" VALUE="回答内容を確認">
-  <INPUT TYPE="reset" id ="btn" VALUE="取消">
+      <LABEL>ボタンを押して内容をご確認ください。</LABEL>
+      <BR />
+      <INPUT TYPE="submit" id="btn" VALUE="回答内容を確認">
+      <INPUT TYPE="reset" id="btn" VALUE="取消">
   </div>
-</FORM>
-  </BODY>
-  <!-- footer -->
-  <footer class="footer">
-      <p class="copyWriter">&copy;Yumi Iwagaki</p>
-    </footer>
-    <!-- //footer -->
+  </FORM>
+</BODY>
+<!-- footer -->
+<footer class="footer">
+  <p class="copyWriter">&copy;Yumi Iwagaki</p>
+</footer>
+<!-- //footer -->
+
 </HTML>

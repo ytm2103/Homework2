@@ -1,5 +1,5 @@
 body {
-    font-size: 16px;
+    font-size: 20px;
     font-family: Arial, sans-serif;
     text-align: center;
     
@@ -7,8 +7,8 @@ body {
   
   header{
     font-size: 40px;
-    margin: 30px 0;
-    margin-bottom: 20px;
+    margin-top: 20px 0;
+    margin-bottom: 50px;
     padding: 5px 0 3px;
     color: #fff;
     background: #aaa;
@@ -16,10 +16,45 @@ body {
     font-family: 'Acme', sans-serif;
   }
   .content{
+    font-size: 20px;
     font-family: 'Acme', sans-serif;
     font-family: 'M PLUS 1p', sans-serif;
     font-family: 'Kosugi Maru', sans-serif;
     
+  }
+
+  .vote_content{
+    font-size: 35px;
+    font-family: 'Acme', sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Kosugi Maru', sans-serif;
+    
+  }
+  .jumbotron-extend {
+    position: relative;
+    height: 100vh;
+    min-height: 300px;
+    background: url(assets/img/top.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0
+    
+}
+.jumbotron-extend:before{
+    content: '';
+    background: inherit;/*.jumbotron-extendで設定した背景画像を継承する*/
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;/*重なり順序を一番下にしておく*/
   }
 
   #btn {
@@ -41,6 +76,7 @@ body {
   footer {
     font-size: 20px;
     margin: 30px 0;
+    margin-top: 250px;
     margin-bottom: 20px;
     padding: 5px 0 3px;
     color: #fff;

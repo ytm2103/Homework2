@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<HTML lang="ja">
-<HEAD>
+<!DOCtype html>
+<html lang="ja">
+<head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,11 +17,11 @@
    <!-- google font-->
    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
-<TITLE>example10</TITLE>
-<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</HEAD>  <!-- 前段の定義部分ここまで -->
+<!-- <TITLE>example10</TITLE> -->
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+</head>  <!-- 前段の定義部分ここまで -->
 <!-- 以下本体 -->
-<BODY>
+<body>
 
 <!-- header -->
 <header class= "title">The Content Of The Response</header>
@@ -50,21 +50,21 @@
     echo '<BR />';
     //  [書込]ボタンを表示（フォームの隠しフィールドで送る）
     echo '<FORM METHOD="POST" ACTION="thanks.php">';
-    echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
-    echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
-    echo '<INPUT NAME="character" type="hidden" value="'.$character.'">';
-    // echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
-    echo '<INPUT NAME="shots" type="hidden" value="'.$shots.'">';
+    echo '<input name="gender" type="hidden" value="'.$gender.'">';
+    echo '<input name="age" type="hidden" value="'.$age.'">';
+    echo '<input name="character" type="hidden" value="'.$character.'">';
+    // echo '<input name="kind" type="hidden" value="'.$kind.'">';
+    echo '<input name="shots" type="hidden" value="'.$shots.'">';
     echo '<P>上記の内容でよろしければ、[送信]を押してください。</P>';
-    echo '<INPUT TYPE="SUBMIT" id ="btn"　VALUE="送信">';
+    echo '<input type="SUBMIT" id ="btn"　value="送信">';
     echo '&nbsp;';
-    echo '</FORM>';
-  }
-  echo '<FORM>';      // 「戻る」ボタン
-  echo '<INPUT TYPE="button" id ="btn" onclick="history.back()" value="戻る">';
+          // 「戻る」ボタン
+  echo '<input type="button" id ="btn" onclick="history.back()" value="戻る">';
   echo '</FORM>';
+  }
+  
 ?>
-<!-- <!DOCTYPE html>
+<!-- <!DOCtype html>
 <html lang="ja">
 <head>
     <title>入力内容確認</title>
@@ -92,7 +92,7 @@
     </form>
 </body>
 </html> 
-</BODY>
+</body>
 
 <!-- footer -->
 </div>
@@ -100,4 +100,4 @@
       <p class="copyWriter">&copy;Yumi Iwagaki</p>
     </footer>
     <!-- //footer -->
-</HTML>
+</html>
