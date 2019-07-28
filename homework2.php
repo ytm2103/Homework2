@@ -16,7 +16,7 @@
 　 
    <!-- google font-->
    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-
+   <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
 <TITLE>example10</TITLE>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>  <!-- 前段の定義部分ここまで -->
@@ -29,7 +29,7 @@
 <!-- //header -->
 
 
-  
+  <div class ="content">
   <?php
   // テキストボックスが空文字('')ならメッセージ
   if (($_POST['shots'] == '') || (!isset($_POST['shots']))) {
@@ -37,31 +37,31 @@
   } else {  // コマ数が入力されていたとき
     $gender = $_POST['gender'];
     $age    = $_POST['age'];
-    $charactor    = $_POST['charactor'];
-    $kind   = $_POST['kind'];
+    $character = $_POST['character'];
+    // $kind   = $_POST['kind'];
     $shots  = $_POST['shots'];
     // 回答内容の確認表示
     
     echo '性別 : '.$gender.'<BR />';
     echo '年代 : '.$age.'<BR />';
-    echo '職業 : '.$charactor.'<BR />';
-    echo 'カメラ種類 : '. $kind.'<BR />';
-    echo '撮影枚数 : '.$shots. 'コマ程度<BR />';
+    echo '好きなキャラ : '.$character.'<BR />';
+    // echo ' : '. $kind.'<BR />';
+    echo '第何部が好きか: '.$shots. '部<BR />';
     echo '<BR />';
     //  [書込]ボタンを表示（フォームの隠しフィールドで送る）
     echo '<FORM METHOD="POST" ACTION="thanks.php">';
     echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
     echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
-    echo '<INPUT NAME="charactor" type="hidden" value="'.$charactor.'">';
-    echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
+    echo '<INPUT NAME="character" type="hidden" value="'.$character.'">';
+    // echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
     echo '<INPUT NAME="shots" type="hidden" value="'.$shots.'">';
-    echo '<P>上記の内容でよろしければ、[書込]を押してください。</P>';
-    echo '<INPUT TYPE="SUBMIT" VALUE="書込">';
+    echo '<P>上記の内容でよろしければ、[送信]を押してください。</P>';
+    echo '<INPUT TYPE="SUBMIT" id ="btn"　VALUE="送信">';
     echo '&nbsp;';
     echo '</FORM>';
   }
   echo '<FORM>';      // 「戻る」ボタン
-  echo '<INPUT TYPE="button" onclick="history.back()" value="戻る">';
+  echo '<INPUT TYPE="button" id ="btn" onclick="history.back()" value="戻る">';
   echo '</FORM>';
 ?>
 <!-- <!DOCTYPE html>
@@ -93,7 +93,9 @@
 </body>
 </html> 
 </BODY>
+
 <!-- footer -->
+</div>
   <footer class="footer">
       <p class="copyWriter">&copy;Yumi Iwagaki</p>
     </footer>

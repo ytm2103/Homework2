@@ -16,14 +16,14 @@
 　 
    <!-- google font-->
    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-
+   <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
   <!-- header -->
   <header class= "title">Thank you for Answering!!</header>
       
     <!-- //header -->
 
     
-
+    <div class ="content">
 <?php
   try {
     require_once('function.php');
@@ -31,12 +31,12 @@
 
     $gender = $_POST['gender'];
     $age = $_POST['age'];
-    $charactor = $_POST['charactor'];
-    $kind = $_POST['kind'];
+    $character = $_POST['character'];
+    // $kind = $_POST['kind'];
     $shots = $_POST['shots'];
     // SQLを実行
-    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, charactor, kind, shots) VALUES (?, ?, ?, ?, ?)');
-    $stmt -> execute([$gender, $age, $charactor, $kind, $shots]);//?を変数に置き換えてSQLを実行
+    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, character, kind, shots) VALUES (?, ?, ?, ?, ?)');
+    $stmt -> execute([$gender, $age, $character, $kind, $shots]);//?を変数に置き換えてSQLを実行
   } catch(PDOException $e) {  // 例外処理
     echo '障害によりご迷惑をおかけしています。<BR />';
     echo 'エラーの内容 : '.
@@ -54,14 +54,15 @@
     echo '<FORM METHOD="POST" ACTION="view.php">';
     echo '<INPUT NAME="gender" type="hidden" value="'.$gender.'">';
     echo '<INPUT NAME="age" type="hidden" value="'.$age.'">';
-    echo '<INPUT NAME="charactor" type="hidden" value="'.$charactor.'">';
-    echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
+    echo '<INPUT NAME="character" type="hidden" value="'.$character.'">';
+    // echo '<INPUT NAME="kind" type="hidden" value="'.$kind.'">';
     echo '<INPUT NAME="shots" type="hidden" value="'.$shots.'">';
-    echo '<P>投票結果については、[見る]を押してください。</P>';
-    echo '<INPUT TYPE="SUBMIT" VALUE="見る">';
+    // echo '<P>投票結果については、[見る]を押してください。</P>';
+    echo '<INPUT TYPE="SUBMIT" id ="btn" VALUE="投票結果を見る">';
     echo '&nbsp;';
     echo '</FORM>';
     ?>
+    </div>
   </BODY>
   <!-- footer -->
   <footer class="footer">

@@ -16,7 +16,7 @@
 　 
    <!-- google font-->
    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-
+   <link href="https://fonts.googleapis.com/css?family=Acme|Kosugi+Maru|M+PLUS+1p&display=swap" rel="stylesheet">
 <TITLE>example10</TITLE>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </HEAD>  <!-- 前段の定義部分ここまで -->
@@ -28,7 +28,7 @@
     <!-- //header -->
 <!-- <H2>JOJOの名言</H2> -->
 <!-- <H3>JOJOの名言に関するアンケート</H3> -->
-<div class="login-box-body">
+<div class="content">
 <FORM METHOD="POST" ACTION="homework2.php">
   <LABEL>性別：</LABEL>
   <INPUT TYPE="radio" NAME="gender" VALUE="男" checked>男
@@ -46,7 +46,7 @@
     </SELECT>
   <BR />
   <LABEL>好きなキャラ：</LABEL>
-    <SELECT NAME="charactor">
+    <SELECT NAME="character">
      <OPTION VALUE="DIO" >DIO</OPTION>
      <OPTION VALUE="承太郎" selected>承太郎</OPTION>
      <OPTION VALUE="花京院">花京院</OPTION>
@@ -57,7 +57,7 @@
      <OPTION VALUE="その他">その他</OPTION>
     </SELECT>
   <BR />
-  <LABEL>カメラの種類：</LABEL>
+  <!-- <LABEL>カメラの種類：</LABEL>
     <SELECT NAME="kind">
      <OPTION VALUe="一眼レフ">一眼レフ</OPTION>
      <OPTION VALUE="ミラーレス">ミラーレス</OPTION>
@@ -66,15 +66,15 @@
      <OPTION VALUE="フィルムカメラ">フィルム</OPTION>
      <OPTION VALUE="その他">その他</OPTION>
     </SELECT>
-  <BR />
-  <LABEL>一週間の撮影枚数：</LABEL>
-    およそ <INPUT TYPE="text" SIZE="4" NAME="shots"> コマ程度
+  <BR /> -->
+  <LABEL>第何部が好きか？：</LABEL>
+    <INPUT TYPE="text" SIZE="4" NAME="shots"> 部
   <BR /><BR />
 
   <LABEL>ボタンを押して内容をご確認ください。</LABEL>
   <BR />
-  <INPUT TYPE="submit" VALUE="回答内容を確認">
-  <INPUT TYPE="reset" VALUE="取消">
+  <INPUT TYPE="submit" id ="btn" VALUE="回答内容を確認">
+  <INPUT TYPE="reset" id ="btn" VALUE="取消">
   </div>
 </FORM>
   </BODY>
