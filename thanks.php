@@ -1,4 +1,4 @@
-<!DOCtype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
    <!-- Required meta tags -->
@@ -51,7 +51,7 @@
   <!-- <h4>ご回答ありがとうございました！</h4> -->
    <!-- 見るボタンを表示（フォームの隠しフィールドで送る） -->
    <?php
-    echo '<FORM METHOD="POST" ACTION="view.php">';
+    echo '<form method="POST" action="view.php">';
     echo '<input name="gender" type="hidden" value="'.$gender.'">';
     echo '<input name="age" type="hidden" value="'.$age.'">';
     echo '<input name="character" type="hidden" value="'.$character.'">';
@@ -60,7 +60,7 @@
     // echo '<P>投票結果については、[見る]を押してください。</P>';
     echo '<input type="SUBMIT" id ="btn" value="投票結果を見る">';
     echo '&nbsp;';
-    echo '</FORM>';
+    echo '</form>';
     ?>
     </div>
 </body>

@@ -1,4 +1,4 @@
-<!DOCtype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
    <!-- Required meta tags -->
@@ -32,7 +32,7 @@
     $stmt = $dbh->prepare('select * FROM Homework');
     $stmt->execute();
     $results = $stmt->fetchAll();
-    $count_array = ['DIO' => 0,'jotaro' => 0];
+    $count_array = ['DIO' => 0,'jotaro' => 0,'kakyouin' => 0,'Polnareff' => 0,'Joseph' => 0];
     foreach($results as $item){
         switch($item['character']){
             case 'DIO':
@@ -41,39 +41,34 @@
             case '承太郎':
             $count_array['jotaro']++;
             break;
+            case '花京院':
+            $count_array['kakyouin']++;
+            break;
+            case 'ポルナレフ':
+            $count_array['Polnareff']++;
+            break;
+            case 'ジョセフ・ジョースター':
+            $count_array['Joseph']++;
+            break;
         }
     }
 
   
-    echo 'DIO'.'   '.$count_array['DIO'].'票';
+    echo 'ＤＩＯ様'.'   '.$count_array['DIO'].'票';
     echo '<br>';
-    echo '<br>';
-    echo '<br>';
-    echo '<br>';
-    echo '承太郎'.'   '.$count_array['jotaro'].'票';
-
     
-?>
-
-
-<!-- <!DOCtype html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>投票結果</title>
-</head>
-<body>
-//画面に表示する -->
-<!-- PHP基本構文 -->
- 
- <!-- $alpha = ['E', 'A', 'D', 'B', 'A', 'C', 'A', 'B', 'E', 'E', 'A', 'A', 'C'];
- $i = 0;
-
-foreach ($alpha as $v) {
-    if ($v === 'A') {
-        $i++;
-    }
-} -->
+    echo '承太郎'.'   '.$count_array['jotaro'].'票';
+    echo '<br>';
+    
+    echo '花京院'.'   '.$count_array['kakyouin'].'票';
+    echo '<br>';
+    
+    echo 'ポルナレフ'.'   '.$count_array['Polnareff'].'票';
+    echo '<br>';
+    
+    echo 'ジョセフ・ジョースター'.'   '.$count_array['Joseph'].'票';
+    
+    ?>
 
 
     <!-- <?php foreach ($results as $result): ?>
@@ -84,9 +79,9 @@ foreach ($alpha as $v) {
         <p><?php echo h($result['shots']); ?></p>
         <hr>
         
-    <?php endforeach; ?>
+    <?php endforeach; ?> -->
 </body>
-</html> -->
+</html>
 
 </div>
 
