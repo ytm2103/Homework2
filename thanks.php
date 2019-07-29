@@ -35,8 +35,8 @@
     // $kind = $_POST['kind'];
     $shots = $_POST['shots'];
     // SQLを実行
-    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, character, kind, shots) valueS (?, ?, ?, ?, ?)');
-    $stmt -> execute([$gender, $age, $character, $kind, $shots]);//?を変数に置き換えてSQLを実行
+    $stmt = $dbh -> prepare('INSERT INTO Homework (gender, age, `character`, kind, shots) valueS (?, ?, ?, ?, ?)');
+    $stmt -> execute([$gender, $age, $character, 'test', $shots]);//?を変数に置き換えてSQLを実行
   } catch(PDOException $e) {  // 例外処理
     echo '障害によりご迷惑をおかけしています。<BR />';
     echo 'エラーの内容 : '.
